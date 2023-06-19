@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wibe App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='wibe.css') }}">
+</head>
+
+<body>
+    <!-- Home Screen -->
+    <div id="home-screen">
+        <!-- Header section -->
+        <header>
+            <div id="header-container">
+                <h1>Wibe</h1>
+                <button id="logout-button">Logout</button>
+            </div>
+            <div id="avatar-container">
+                <img id="avatar" src="" alt="User avatar" onclick="openProfile()">
+            </div>
+        </header>
+
+        <!-- Wibe input section -->
+        <section id="wibe-input">
+            <input type="text" id="wibe-text" placeholder="What's your wibe?">
+            <button id="wibe-submit">Submit</button>
+        </section>
+
+        <!-- Wibe feed section -->
+        <section id="wibe-feed">
+            <!-- Wibe posts will be inserted here dynamically -->
+        </section>
+    </div>
+
+    <!-- User Profile -->
+    <div id="user-profile" style="display: none;">
+        <!-- Content will be inserted dynamically -->
+    </div>
+
+    <script src="{{ url_for('static', filename='wibe.js') }}"></script>
+</body>
+
+</html>

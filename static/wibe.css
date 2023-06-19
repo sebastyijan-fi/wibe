@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5f9; /* light sky blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* align items to the center */
+    justify-content: flex-start; /* align items to the top */
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #333;
+    background: -webkit-linear-gradient(left, coral, cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.7px black;
+}
+
+#logout-button {
+    color: #333; /* e-ink style */
+    background: none; /* e-ink style */
+    border: none; /* e-ink style */
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#avatar-container {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+#avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+button {
+    background-color: #f9bc60; /* sunset orange */
+    color: #033649; /* deep sea blue */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #f9bc60, #f9a828); /* sunset gradient */
+}
+
+/* Home Screen Styles */
+#home-screen {
+    max-width: 600px;
+    padding: 20px;
+}
+
+#home-screen #wibe-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 50px; /* make input field rounder */
+    font-size: 1.1em; /* make text a bit larger */
+}
+
+#home-screen #wibe-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* User Profile Styles */
+#user-profile {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f0a1; /* sand yellow */
+    border-radius: 5px;
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    #home-screen, #user-profile {
+        width: auto;
+    }
+}

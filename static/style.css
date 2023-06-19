@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  /* full height of the viewport */
+}
+
+h1 {
+    font-size: 4.5em;  /* larger font size */
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    background: -webkit-linear-gradient(left, coral, cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.7px black;  /* border around the text */
+    margin-top: 50px; /* provide some space from the top */
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* Landing Page Styles */
+#landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#login-form, #registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* align button in center */
+}
+
+.form-input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* Home Screen Styles */
+#home-screen {
+    padding: 20px;
+}
+
+#home-screen header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#home-screen #wibe-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home-screen #wibe-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* User Profile Styles */
+#user-profile {
+    padding: 20px;
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+    .form-input {
+        width: auto;
+    }
+}
