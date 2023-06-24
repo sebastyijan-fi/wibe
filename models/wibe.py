@@ -6,6 +6,7 @@ class Wibe(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     mood_input = db.Column(db.String(300), nullable=False)
     pinecone_vector_id = db.Column(db.String, nullable=False)
+    country = db.Column(db.String(120))  # Add this line for the country
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
     # Create a relationship to the User model
