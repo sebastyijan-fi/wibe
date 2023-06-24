@@ -6,6 +6,7 @@ from routes.registration import bp as registration_bp
 from routes.login import bp as login_bp
 from routes.logout import bp as logout_bp  # Assuming you named your logout blueprint as 'logout_bp'
 from routes.submit_wibe import bp as submit_wibe_bp
+from routes.get_wibe import bp as get_wibe_bp
 from models.user import User
 from flask_cors import CORS
 from typing import cast
@@ -39,7 +40,7 @@ def create_app():
     app.register_blueprint(login_bp)
     app.register_blueprint(logout_bp)
     app.register_blueprint(submit_wibe_bp)
-
+    app.register_blueprint(get_wibe_bp)
 
     return app
 

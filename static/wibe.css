@@ -113,3 +113,68 @@ input[type="text"] {
         width: auto;
     }
 }
+
+/* Wibe card style */
+#home-screen .wibe-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#home-screen .wibe-card p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #333;
+}
+
+#home-screen .wibe-card .timestamp {
+    color: #777;
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+.user-latest-wibe {
+    background: #8ef580; /* soft blue */
+    border: 1px solid #3e8e9d; /* darker shade of blue */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    transition: all 0.3s ease-in-out; /* transition for smooth animation */
+}
+
+.user-latest-wibe:hover {
+    transform: scale(1.05); /* subtle grow effect on hover */
+}
+
+
+#avatar {
+    width: 50px;  /* Adjust to suit */
+    height: 50px; /* Adjust to suit */
+    border-radius: 50%; /* Makes the avatar round. Remove if not needed. */
+    cursor: pointer;
+}
+
+
+#tooltip {
+    position: absolute;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    bottom: 100%; /* Position it above the image */
+    left: 50%;
+    margin-left: -60px; /* Centers the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#avatar:hover + #tooltip {
+    opacity: 1;
+}
