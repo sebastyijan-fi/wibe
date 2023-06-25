@@ -151,6 +151,16 @@ function displayWibes(wibes) {
 
   // Rearrange wibes so that user's latest wibe is always first
   const userLatestWibe = wibes.pop();
+
+  // Check if the user has not submitted any wibe yet
+  if (userLatestWibe.message) {
+    var messageDiv = document.createElement("div");
+    messageDiv.classList.add("message-card");
+    messageDiv.textContent = userLatestWibe.message;
+    wibeFeed.appendChild(messageDiv);
+    return; // return early so that no other wibes are displayed
+  }
+
   wibes.unshift(userLatestWibe);
 
   // Sort other wibes in descending order of timestamp
@@ -183,6 +193,7 @@ function displayWibes(wibes) {
     wibeFeed.appendChild(wibeDiv);
   }
 }
+
 
 // Call the function to fetch and display wibes when the page loads
 fetchAndDisplayWibes();

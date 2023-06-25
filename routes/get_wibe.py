@@ -71,7 +71,13 @@ def get_latest_wibe_route():
             "country": user_latest_wibe.country,
             "timestamp": user_latest_wibe.timestamp.isoformat() + "Z"
         })
+    else:
+        response_wibes.append({
+            "user_id": current_user.id,
+            "message": "You have not submitted any wibe yet. Feel free to share your mood!"
+        })
 
     return jsonify(response_wibes)
+
 
 
